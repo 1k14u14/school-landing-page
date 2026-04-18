@@ -1,0 +1,439 @@
+/* Base Styles & Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 15px;
+  color: #1a252f;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  width: 85%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.bg-light {
+  background-color: #f4f7f6;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Header & Nav */
+header {
+  background-image: url(https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #fff;
+  z-index: 1;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.btn:hover {
+  background: #e67e22;
+}
+
+/* Grids */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+}
+
+/* --- Activities Section Layout --- */
+.activity-layout {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.activity-image {
+  flex: 1;
+  width: 100%;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 400px;
+  background: url("https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")
+    center/cover;
+}
+
+.activity-text {
+  flex: 1;
+}
+
+.activity-text h2 {
+  margin-bottom: 5px;
+  font-size: 2.5rem;
+}
+
+.activity-text .section-subtitle {
+  color: #7f8c8d;
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.activity-text p {
+  margin-bottom: 20px;
+}
+
+.activity-list {
+  list-style: none;
+}
+
+.activity-list li {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  border-left: 4px solid #f39c12;
+}
+
+/* --- Student Spotlight Section --- */
+.spotlight-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Gives it a nice floating card effect */
+  border-left: 6px solid #f39c12; /* Accent color line on the left */
+}
+
+.spotlight-text {
+  flex: 1.2; /* Takes up slightly more room than the image */
+}
+
+.badge {
+  display: inline-block;
+  background: #e67e22;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.spotlight-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+.spotlight-text p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: #555;
+}
+
+.quote {
+  font-style: italic;
+  font-weight: bold;
+  color: #1a252f !important;
+  border-left: 3px solid #bdc3c7;
+  padding-left: 15px;
+  margin-top: 20px;
+}
+
+.spotlight-image {
+  flex: 1;
+  width: 100%;
+}
+
+/* Includes a high-quality Unsplash image of a happy student */
+.medal-image {
+  width: 100%;
+  height: 350px;
+  background: url("img/student-and-medal.jpg") center/cover;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Scout Extracurricular Spotlight --- */
+.scout-card {
+  display: flex;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden; /* Keeps the big image inside the rounded corners */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Left Side: Big Image */
+.scout-image {
+  flex: 1.2; /* Takes up slightly more than half the card */
+  min-height: 500px; /* Ensures the image is nice and big */
+  /* Using a high-quality Unsplash image of a hiking/camping vibe */
+  background: url("img/scout2.jpg") center/cover;
+}
+
+/* Right Side: Text */
+.scout-text {
+  flex: 1; /* Takes up the remaining space */
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scout-text h3 {
+  font-size: 2.2rem;
+  color: #1a252f;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.scout-text p {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.scout-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.scout-list li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #333;
+  background: #f9f9f9;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border-left: 4px solid #27ae60; /* Forest green accent line */
+}
+
+/* Why Us */
+.text-content ul {
+  list-style: none;
+}
+
+.text-content li {
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-left: 5px solid #3498db;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery-item {
+  background: #bdc3c7;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery-item:nth-child(1) {
+  background: url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")
+    center/cover;
+}
+
+.gallery-item:nth-child(2) {
+  background: url("https://images.unsplash.com/photo-1508344928928-7165b67de128?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")
+    center/cover;
+}
+
+.gallery-item:nth-child(3) {
+  background: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")
+    center/cover;
+}
+
+.gallery-item:nth-child(4) {
+  background: url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")
+    center/cover;
+}
+
+.gallery-item:nth-child(5) {
+  background: url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")
+    center/cover;
+}
+
+.gallery-item:nth-child(6) {
+  background: url("https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")
+    center/cover;
+}
+
+.gallery-item:nth-child(7) {
+  background: url("https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")
+    center/cover;
+}
+
+.gallery-item:nth-child(8) {
+  background: url("https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")
+    center/cover;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+/* Achievements */
+.achievement-stat h1 {
+  font-size: 4rem;
+  color: #3498db;
+  margin-bottom: 0;
+}
+
+/* Footer (Contact & Maps) */
+footer {
+  background: #1a252f;
+  color: #fff;
+  padding: 50px 0 20px;
+}
+
+footer h3 {
+  color: #f39c12;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.social-links a {
+  display: block;
+  margin-bottom: 10px;
+  color: #bdc3c7;
+}
+
+.social-links a:hover {
+  color: #f39c12;
+}
+
+.copyright {
+  border-top: 1px solid #34495e;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* Responsive Fix for Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .activity-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .spotlight-card {
+    flex-direction: column-reverse; /* Puts the text on top of the image on mobile */
+    padding: 25px;
+  }
+  .scout-card {
+    flex-direction: column; /* Stacks the image on top of the text */
+  }
+
+  .scout-image {
+    min-height: 300px; /* Makes the image a bit shorter on phones so it fits on screen */
+  }
+
+  .scout-text {
+    padding: 30px 20px; /* Shrinks the padding for small screens */
+  }
+}
