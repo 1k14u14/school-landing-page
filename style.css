@@ -411,9 +411,6 @@ footer h3 {
 
 /* Responsive Fix for Mobile */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
   .hero h1 {
     font-size: 2rem;
   }
